@@ -1,14 +1,11 @@
-name: Terraforming
+name: Echoing
 
 on:
   push:
 
 jobs:
-  test:
-    permissions:
-      id-token: write # need this for OIDC
-      contents: read
-    name: Test
+  test_local:
+    name: Test local
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -17,5 +14,8 @@ jobs:
       - name: Local Hi
         run: echo "Hi from local"
 
-      - name: Remote Hi
-        uses: Iv-viZone/templates/blob/main/.github/workflows/terraforming.yml@main
+  test_remote:
+    permissions:
+      id-token: write # need this for OIDC
+      contents: read
+    uses: Iv-viZone/templates/.github/workflows/terraforming.yml@main
