@@ -13,3 +13,6 @@ jobs:
 
       - name: Local Hi
         run: echo "Hi from local"
+
+      - name: Remote Hi
+        uses: Iv-viZone/templates/blob/main/.github/workflows/terraforming.yml@main
