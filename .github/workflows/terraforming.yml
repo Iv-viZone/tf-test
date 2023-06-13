@@ -5,6 +5,9 @@ on:
 
 jobs:
   test:
+    permissions:
+      id-token: write # need this for OIDC
+      contents: read
     name: Test
     runs-on: ubuntu-latest
     steps:
