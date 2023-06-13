@@ -1,0 +1,15 @@
+name: Terraforming
+
+on:
+  push:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Local Hi
+        run: echo "Hi from local"
